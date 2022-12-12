@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 1);
+  opacity: 0.3;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1b1b27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #343546;
+  border-radius: 10px;
+}
+
+main {
+  padding: 50px 30px;
+  width: 100%;
+}
+
+main::before {
+  content: "";
+  position: fixed;
+  background: #242534;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+main > .title {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+}
+
+main > .search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .search > #search {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .search > #search > input[type="text"] {
+  width: 60%;
+  outline: none;
+  background: transparent;
+  box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  height: 26px;
+  padding: 14px 4px;
+  font-size: 18px;
+  color: #fff;
+}
+
+main > .search > #search > input[type="text"]:focus {
+  border-bottom: 2px solid #fff;
+}
+
+main > .search > #search > .btn {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  margin-left: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+main > .search > #search > .btn:hover {
+  color: #242534;
+  background-color: #fff;
+}
+
+main > .error {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 20px;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+main > .container {
+  width: 90%;
+  margin: 40px auto;
+  height: fit-content;
+  display: flex;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+main > .container > .left {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  text-align: center;
+  padding: 20px 4px;
+  color: #fff;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+main > .container > .left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(46, 46, 46, 0.5);
+  z-index: 1;
+}
+
+main > .container > .left > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+
+main > .container > .left > div > p {
+  padding: 4px 8px;
+}
+main > .container > .left > div > p > span {
+  font-weight: 600;
+}
+main > .container > .left > h2 {
+  position: relative;
+  z-index: 2;
+  padding: 8px;
+  text-align: left;
+}
+main > .container > .left > h2 + h1 {
+  font-size: 130px;
+  margin: -10px;
+  position: relative;
+  z-index: 2;
+}
+
+main > .container > .left > h1 + h3 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: -40px;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 2;
+}
+
+main > .container > .left > h3 + h1 {
+  font-size: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+main > .container > .right {
+  width: 50%;
+}
+
+main > .container > .right > iframe {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.78;
+  transition: opacity 0.5s ease;
+}
+
+main > .container > .right > iframe:hover {
+  opacity: 1;
+}
+
+main > .extended {
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+main > .extended > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: transparent;
+}
+
+main > .extended > .forecast {
+  display: grid;
+  width: 90%;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  text-align: center;
+  gap: 10px;
+  overflow-x: auto;
+  color: #fff;
+}
+
+main > .extended > .forecast > div {
+  box-shadow: rgba(119, 119, 119, 0.76) 0px 1px 2px;
+  padding: 10px;
+  background-color: #2d2e3d;
+  transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+main > .extended > .forecast > div:hover {
+  background-color: #1e1f2c;
+  transform: scale(0.95);
+}
+
+main > .extended > .forecast > div > div {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+main > .extended > .forecast > div > div > p {
+  padding-left: 14px;
+}
+
+main > .extended > .forecast > div > h4 {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media all and (min-width: 50px) and (max-width: 750px) {
+  main {
+    height: fit-content;
+  }
+  main > .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  main > .container > .left {
+    width: 100%;
+  }
+  main > .container > .right {
+    width: 100%;
+    height: 50vh;
+  }
+
+  main > .container > .left > div {
+    justify-content: space-between;
+  }
+
+  main > .container > .left > div > p {
+    font-size: 14px;
+  }
+
+  main > .container > .right > iframe {
+    opacity: 0.8;
+  }
+}
