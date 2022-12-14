@@ -1,7 +1,20 @@
 const container = document.querySelector(".left");
 const search = document.querySelector("#search");
 const left = document.querySelector("main > .container > .left");
+// let light =true;
 
+// if(light){
+//   // document.getElementsByTagName("html")[0].style.backgroundColor = "white"
+//   document.getElementsByTagName("main")[0].style.border = "1px solid white"
+//   document.getElementsByTagName("main")[0].style.backgroundColor = "white"
+//   document.getElementsByTagName("main")[0].style.height = "100vh"
+
+
+//   document.getElementsByTagName("body")[0].style.border = "white"
+
+//   // background: var(--gradient-box-w);
+//   // box-shadow: var(--shadow-white-3);
+// }
 
 search.addEventListener("submit",get_weather);
 
@@ -14,6 +27,7 @@ async function get_weather(e) {
 
     let res = await fetch(url);
     let data = await res.json();
+    console.log(data);
     if(data.coord){
       display_data(data);
     forcast_data(data.coord.lon,data.coord.lat);
@@ -127,9 +141,21 @@ function display_forecast(data){
   document.querySelector(".extended > h2").style.color="#fff";
   document.querySelector(".forecast").innerHTML=null;
   data.map(function(elem,index){
+
     let div = document.createElement("div");
+    div.style.borderRadius="4px";
+    // div.style.border="1px solid #2d2e3d";
+// light?div.style.background= "linear-gradient(to right, #e3e9ed, transparent)":null;
+// light?div.style.boxShadow= "var(--shadow-white-3)":null;
+
+// light?div.style.color= "black":null;
+
+    // background: var(--gradient-box-w);
+    // box-shadow: var(--shadow-white-3);
+
 
     let day= document.createElement("h2");
+
     day.innerText=days[(today+index)%7];
 
     let img = document.createElement("img");
