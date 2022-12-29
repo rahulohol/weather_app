@@ -19,3 +19,9 @@ A website to check weather of any city.
 <br/>
 
 ![Screenshot (392)](https://user-images.githubusercontent.com/105929105/209901529-3059825a-1009-43ec-92cc-61a3717e4a6d.png)
+
+## Tech Stack
+
+* HTML
+* CSS
+* JavaScript
