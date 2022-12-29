@@ -12,3 +12,4 @@ A website to check weather of any city.
 * Live Link : https://cityweatherapp2.netlify.app/
 
 # Project UI
+![Screenshot (391)](https://user-images.githubusercontent.com/105929105/209901380-42d040e4-2b36-4cba-a0bb-e930846daa5e.png)
