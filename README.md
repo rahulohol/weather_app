@@ -20,6 +20,10 @@ A website to check weather of any city.
 
 ![Screenshot (392)](https://user-images.githubusercontent.com/105929105/209901529-3059825a-1009-43ec-92cc-61a3717e4a6d.png)
 
+<br/>
+
+![Screenshot (402)](https://user-images.githubusercontent.com/105929105/210150086-acf25780-f37d-4de6-b363-6fe8cc76a210.png)
+
 ## Tech Stack
 
 * HTML
